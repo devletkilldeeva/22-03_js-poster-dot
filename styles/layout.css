@@ -3,11 +3,77 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  cursor: none;
+
+  /* mix-blend-mode: difference; */
+}
+
 h1, p {
   font-family: Avenir Next;
   font-weight: bold;
+
+  /* mix-blend-mode: difference; */
 }
 
 a {
   color: #F122FF;
+
+  /* mix-blend-mode: difference; */
+}
+
+body .cursor {
+  pointer-events: none;
+}
+body .cursor__ball {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+
+  mix-blend-mode: difference;
+}
+body .cursor__ball circle {
+  fill: #f7f8fa;
+}
+body .left,
+body .right {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+body .right {
+  background: #fff;
+}
+body .right a {
+  border-bottom: 2px solid #000;
+}
+body .right h1,
+body .right p,
+body .right a {
+  color: #000;
+}
+
+.pointer {
+  position: absolute;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+
+  width: 300px;
+  height: 300px;
+
+  transition: 0.1s;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+
+  border-radius: 50%;
+  background: #fff;
+
+  mix-blend-mode: difference;
 }
