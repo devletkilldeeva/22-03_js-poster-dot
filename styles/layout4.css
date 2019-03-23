@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  background-color: black;
+
+  justify-content: center;
+  align-items: center;;
+}
+
+section {
+
+}
+
+h1 {
+  display: flex;
+
+  margin-top: 70vw;
+
+  text-transform: uppercase;
+
+  color: #fff;
+
+  font-size: 24em;
+}
+
+div {
+  color: #fff;
+
+  font-family: Avenir Next;
+  font-size: 8vw;
+  font-weight: medium;
+}
+
+img {
+  width: 15vw;
+}
+
+.reload {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.bg{
+	position: absolute;
+  z-index: 100;
+	top: 50%;
+	left: 50%;
+
+	width: 30vh;
+	height: 30vh;
+
+	transform: translate(-50%, -50%);
+	animation: move infinite 2s;
+
+  color: black;
+	border-radius: 50%;
+	background: #fff;
+
+  mix-blend-mode: difference;
+}
+
+@keyframes move{
+	0%{
+		transform: translate(-50%, -50%);
+	}
+	50%{
+		transform: translate(-50%, -50%) scale(3.5);
+	}
+}
